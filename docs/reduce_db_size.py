@@ -9,7 +9,9 @@ with open("db.json", "r") as file:
 
 output = []
 for entry in data:
-    del entry["html"]
+    if entry.get("html") != None:
+        del entry["html"]
+
     sentences = re.split(r"[.!?]+", entry["details"])
 
     if len(sentences) > NUM_SENTENCES_TO_REMOVE:
