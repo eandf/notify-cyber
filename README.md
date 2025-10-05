@@ -8,6 +8,7 @@
 
 - [Overview](#overview)
 - [Project Vision](#project-vision)
+- [Dataset](#dataset)
 - [Core Components](#core-components)
   - [Frontend](#frontend)
   - [Collector](#collector)
@@ -26,6 +27,10 @@ Notify Cyber was a dynamic cybersecurity news aggregation platform created by **
 ## Project Vision
 
 The vision behind Notify Cyber was to create a centralized and personalized platform for cybersecurity news. We aimed to simplify how professionals and enthusiasts stay informed about the latest digital threats and vulnerabilities. By aggregating information from trusted sources and offering powerful filtering capabilities, the platform allowed users to receive a newsfeed tailored to the hardware and software they care about most, complete with email notifications and a robust search engine.
+
+## Dataset
+
+The complete dataset of all cybersecurity news articles collected and displayed throughout Notify Cyber's operation is available in [`./docs/db.json`](./docs/db.json). This file contains the entire collection of articles aggregated during the platform's active period.
 
 ## Core Components
 
