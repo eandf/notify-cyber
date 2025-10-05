@@ -20,5 +20,7 @@ for entry in data:
 
     output.append(copy.deepcopy(entry))
 
+output.sort(key=lambda x: x.get("recorded", 0), reverse=True)
+
 with open("db.json", "w") as file:
     json.dump(output, file)
