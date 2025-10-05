@@ -332,6 +332,7 @@ ch_*
 .ch*
 code_dump_*
 complete_db.json
+assets/docs/
 keys.json
 .claude/
 *.pem

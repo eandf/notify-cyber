@@ -2,34 +2,71 @@
 
 ## Overview
 
-PostgreSQL database for storing scraped cybersecurity news. Main table: `cybernews` (id, source, url, title, date, recorded, details, html).
+This directory contains the setup scripts for the PostgreSQL database, which stores the cybersecurity news articles aggregated by the collector. The main table is `cybernews`, designed to hold all relevant article data.
 
-## Setup
+## Quick Start with Docker
 
-1. Create database:
+For a fast and easy setup, a `run.sh` script is provided to automate the process using Docker.
 
-   ```bash
-   psql -U postgres -c "CREATE DATABASE notify_cyber;"
-   psql -U postgres -d notify_cyber
-   ```
+### Prerequisites
 
-2. Run schema:
+- Docker must be installed and running on your system. You can download it from the official website: [Docker Get Started](https://www.docker.com/get-started/).
 
-   ```bash
-   psql -U postgres -d notify_cyber -f setup.sql
-   ```
+### Usage
 
-3. Data is populated by the collector service.
+Simply execute the script from this directory:
+
+```bash
+bash ./run.sh
+```
+
+This script will:
+1.  Check if a PostgreSQL container is already running.
+2.  If not, it will start a new PostgreSQL container named `pgDB-<timestamp>`.
+    - The default password for the `postgres` user is set to `password`.
+    - The database port `5432` is mapped to your local machine.
+3.  Automatically open an interactive `psql` shell connected to the database.
+
+Once inside the `psql` shell, you can proceed to run the schema setup.
+
+## Manual Setup
+
+If you prefer to set up the database without the script or on a non-Docker instance, follow these steps.
+
+1.  **Create the Database**:
+    ```bash
+    psql -U postgres -c "CREATE DATABASE notify_cyber;"
+    ```
+
+2.  **Connect to the Database**:
+    ```bash
+    psql -U postgres -d notify_cyber
+    ```
+
+3.  **Run Schema**:
+    Once connected, run the `setup.sql` script to create the necessary tables and schema.
+    ```sql
+    \i setup.sql
+    ```
+    Alternatively, you can run it from your shell:
+    ```bash
+    psql -U postgres -d notify_cyber -f setup.sql
+    ```
+
+The database will then be ready for the collector service to populate it with data.
 
 ## Tools
 
-SQL utilities in `tools/` for analysis and maintenance:
+This directory includes several SQL scripts in the `tools/` directory for database analysis and maintenance:
 
-- `avg_per_day.sql`: Average daily entries over 24 months
-- `count_tables.sql`: Row counts by source (CVE vs non-CVE)
-- `full_db_size.sql`: Database size and total rows
-- `full_search.sql`: Full-text search (prepare/execute with term)
-- `list_duplicated_urls.sql`: Find duplicate URLs
-- `top_latest_ids.sql`: 10 latest entries
+- **`avg_per_day.sql`**: Calculates the average number of daily entries over 24 months.
+- **`count_tables.sql`**: Counts rows by source (CVE vs. non-CVE).
+- **`full_db_size.sql`**: Reports the total database size and row count.
+- **`full_search.sql`**: Performs a full-text search (requires preparing and executing with a search term).
+- **`list_duplicated_urls.sql`**: Finds duplicate URLs in the `cybernews` table.
+- **`top_latest_ids.sql`**: Retrieves the 10 most recent entries.
 
-Run with: `psql -U postgres -d notify_cyber -f tools/script.sql`
+You can run any of these tools with the following command, replacing `script.sql` with the desired file:
+```bash
+psql -U postgres -d notify_cyber -f tools/script.sql
+```
