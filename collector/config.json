@@ -1,0 +1,60 @@
+{
+  "default_openai_small_model": "gpt-4o-mini",
+  "log_file": "/app/logfile.log",
+  "debug_log_file": "/tmp/logfile.log",
+  "database": {
+    "columns": ["source", "url", "title", "date", "recorded", "details", "html"]
+  },
+  "collector": {
+    "ignore_ai_sources": ["cve", "microsoft"],
+    "cve": {
+      "root_url": "https://nvd.nist.gov/vuln/detail/",
+      "cve_latest_year": 2022
+    }
+  },
+  "env_paths": [
+    "/app/.env",
+    "/Users/optimus/Services/nc-collector/.env",
+    "/home/notify-cyber/nc-collector/.env",
+    "/Users/mehmet/SandBox/git/GitHub/interup/nc-collector/.env",
+    "/opt/.env",
+    "/root/nc-collector/.env",
+    "/Users/mehmet/SandBox/git/GitHub/eaf/nc-collector/.env"
+  ],
+  "api": {
+    "max_array_str_size": 3000,
+    "valid_sources": {
+      "caisa": "cisa",
+      "dr": "darkreading",
+      "thn": "thehackernews",
+      "isg": "itsecurityguru",
+      "cve": "cve"
+    },
+    "valid_input_keys": ["sources", "after", "filter"],
+    "max_limit": 10,
+    "max_days_back": 2.5
+  },
+  "request": {
+    "header": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36",
+      "Accept-Language": "en-US,en;q=0.5",
+      "Connection": "keep-alive"
+    },
+    "sec_timeout": 15
+  },
+  "ai": {
+    "sentences": 3,
+    "min_words": 6,
+    "max_words": 10,
+    "token_limit": 16384,
+    "token_offset": 25,
+    "ideal_text_percent": 0.8,
+    "trim_p_value": 0.5,
+    "trim_init_value": 5,
+    "model_name": "gpt-4o-mini",
+    "models_cost_per_1k_tokens": 0.00015,
+    "prompts": {
+      "summary": "I am going to provide you with some text. Read though this text and give an accurate summary/overview of this text. If possible, word your summary such that is hooks the reader and makes them want to read the original text. Represent the summary/overview in {} sentences, where each sentence is between {} to {} words. Make your response just one continuous text with no newlines. Here is the text:"
+    }
+  }
+}
