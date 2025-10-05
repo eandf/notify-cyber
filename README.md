@@ -22,7 +22,7 @@
 
 ## Overview
 
-Notify Cyber was a dynamic cybersecurity news aggregation platform created by **Mehmet Yilmaz** and **Dylan Eck** in **May 2023**. It operated from **June 1, 2023** to **October 31, 2025** where it successfully provided timely and relevant security news to **over 17,000 visitors**. The project gained initial visibility through a popular Reddit post and created numerous opportunities for its developers. This repository now hosts a static, open source version of the original website, preserving its design and functionality as a snapshot in time.
+Notify Cyber was a dynamic cybersecurity news aggregation platform created by **Mehmet Yilmaz** and **Dylan Eck** in **May 2023**. It operated from **June 1, 2023** to **October 5, 2025** where it successfully provided timely and relevant security news to **over 17,000 visitors**. The project gained initial visibility through a popular Reddit post and created numerous opportunities for its developers. This repository now hosts a static, open source version of the original website, preserving its design and functionality as a snapshot in time.
 
 ## Project Vision
 
@@ -82,7 +82,7 @@ To get the full Notify Cyber platform running, you should set up the components 
 
 ## Project Status
 
-Notify Cyber was officially retired on **October 31, 2025**. The decision was made because the project could not achieve sufficient monetization to cover its ongoing maintenance and operational costs. This repository provides a static and open sourced version of the platform as a tribute to its legacy and a resource for the community. The domain will remain active to ensure continued access to this snapshot.
+Notify Cyber was officially retired on **October 5, 2025**. The decision was made because the project could not achieve sufficient monetization to cover its ongoing maintenance and operational costs. This repository provides a static and open sourced version of the platform as a tribute to its legacy and a resource for the community. The domain will remain active to ensure continued access to this snapshot.
 
 ## License
 
