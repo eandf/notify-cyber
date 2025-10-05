@@ -1,31 +1,35 @@
-# Notify Cyber - Collector Deployment
+# Notify Cyber Collector
 
-## About
+## Overview
 
-This is a Notify Cyber deployment that scrapes the internet for cybersecurity news. It then cleans up and processes the data it has scraped so that it can be structured and added to the project's database. The collector builds the database and keeps it updated.
+The Notify Cyber collector is a Python based service that scrapes the internet for cybersecurity news from various trusted sources. It cleans up and processes the collected data, structuring it for storage in the PostgreSQL database. The collector is responsible for building and maintaining the news article database.
 
-## Links
+## External Services
 
-- [Docker](https://www.docker.com/)
-- [OpenAI](https://platform.openai.com/settings/organization/usage/legacy)
-- [Supabase](https://supabase.com/dashboard/projects)
-- [Linode](https://www.linode.com/pricing/)
-- [Vercel](https://vercel.com/)
-- [WebcrawlingAPI](https://dash.webcrawlerapi.com/stats)
+The collector integrates with several external services:
+
+- [Docker](https://www.docker.com/) for containerization
+- [OpenAI](https://platform.openai.com/) for AI powered data processing
+- [Supabase](https://supabase.com/) for database hosting
+- [Linode](https://www.linode.com/) for cloud deployment
+- [Vercel](https://vercel.com/) for frontend hosting
+- [WebcrawlingAPI](https://webcrawlerapi.com/) for web scraping capabilities
 
 ## How To Run
 
-**Quick Start**: Run `./start.sh` to automatically build and run the Docker container.
+### Quick Start
 
-**Manual Setup**:
+Run `./start.sh` to automatically build and run the Docker container.
 
-1. Make sure to be in the root directory of this project, use the **cd** command.
+### Manual Setup
 
-2. Add your **.env**, refer to **.env_template** to figure out what keys you need.
+1. Navigate to the collector directory using the `cd` command.
 
-3. Install and setup [Docker](https://www.docker.com/)
+2. Create your `.env` file based on the `.env_template` to configure the required API keys and credentials.
 
-   **Note**: For host setup on Linode or Raspberry Pi, see the `./host/` directory for automated setup scripts and configuration.
+3. Install and set up [Docker](https://www.docker.com/) on your system.
+
+   **Note**: For deployment on Linode or Raspberry Pi, refer to the host setup section below for automated configuration scripts.
 
 4. Build the docker image for this project:
 
@@ -70,3 +74,60 @@ docker ps
 # kill the container
 docker kill <container_name_or_id>
 ```
+
+## Collector Host Setup
+
+### Overview
+
+This section provides guidance for deploying the Notify Cyber collector on various hardware platforms. The collector has been successfully tested on:
+
+- [Linode](https://www.linode.com/) Shared CPU Nanode 1 GB plan
+- [Raspberry Pi](https://www.raspberrypi.com/) 3B+ with 16GB SD card and Raspberry Pi OS 32 bit
+
+### Hardware Requirements
+
+#### Raspberry Pi
+
+- **Minimum Model**: Raspberry Pi 3B+ or newer
+- **OS Architecture**:
+  - **64 bit** for newer models (Pi 4, Pi 5), recommended
+  - **32 bit** for older models (Pi 3B+)
+- **Storage**: At least 32GB microSD card
+- **Power**: Micro USB for older models or USB C charger for newer models
+- **Purchase**: Available on [Amazon](https://www.amazon.com/s?k=raspberry+pi)
+
+### Setup Instructions
+
+#### Option 1: Linode Ubuntu Instance
+
+1. Set up and SSH into a [Linode](https://www.linode.com/) instance using Ubuntu OS
+2. Run the setup script: `bash ./setup.sh`
+3. Add the following to the end of the `.bashrc` file: `source /root/config.sh`
+4. Re-source the `.bashrc` file: `source .bashrc`
+5. Install Docker following the official guide: https://docs.docker.com/engine/install/
+6. Run nc-collector's `get_going.sh` script to get Notify Cyber running
+
+#### Option 2: Raspberry Pi
+
+1. **Prepare the Raspberry Pi**:
+   - Download Raspberry Pi OS Lite from the [official website](https://www.raspberrypi.com/software/operating-systems/)
+   - Choose 64 bit for newer models or 32 bit for older models like the 3B+
+   - Flash the OS using [Raspberry Pi Imager](https://www.raspberrypi.com/software/)
+
+2. **Initial Setup**:
+   - Boot the Pi and complete the initial setup process
+   - Enable SSH if needed for remote access
+   - Update the system packages: `sudo apt update && sudo apt upgrade -y`
+
+3. **Run Setup Script**:
+   - Execute the setup script: `bash ./setup.sh`
+   - The configuration will be automatically added to your `.profile` file
+
+4. **Install Docker**:
+   - Follow the [official Docker installation guide](https://docs.docker.com/engine/install/raspberry-pi-os/) for Raspberry Pi OS
+   - Alternatively, use the convenience script: `curl -fsSL https://get.docker.com -o get-docker.sh && sh get-docker.sh`
+   - Add your user to the docker group: `sudo usermod -aG docker $USER`
+   - Reboot or log out and back in for the changes to take effect
+
+5. **Start the Collector**:
+   - Run the `get_going.sh` script to start Notify Cyber

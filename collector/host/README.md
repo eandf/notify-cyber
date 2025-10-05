@@ -1,11 +1,11 @@
 # Collector Host Setup
 
-## About
+## Overview
 
-This directory contains scripts/assets to help get Notify Cyber's collector running on either:
+This directory contains scripts and assets to help deploy the Notify Cyber collector on the following platforms:
 
-- An Ubuntu instance on [Linode](https://www.linode.com/)
-- A local [Raspberry Pi](https://www.raspberrypi.com/) (3B+ or newer recommended)
+- Ubuntu instance on [Linode](https://www.linode.com/)
+- Local [Raspberry Pi](https://www.raspberrypi.com/) (3B+ or newer recommended)
 
 ## Hardware Requirements
 
@@ -13,48 +13,44 @@ This directory contains scripts/assets to help get Notify Cyber's collector runn
 
 - **Minimum Model**: Raspberry Pi 3B+ or newer
 - **OS Architecture**:
-  - **64-bit** for newer models (Pi 4, Pi 5) - recommended
-  - **32-bit** for older models (Pi 3B+)
+  - **64 bit** for newer models (Pi 4, Pi 5), recommended
+  - **32 bit** for older models (Pi 3B+)
 - **Storage**: At least 32GB microSD card
-- **Power**: Micro USB (older models) or USB-C charger (newer models)
-- **Purchase**: Available on [Amazon](https://www.amazon.com/s?k=raspberry+pi&crid=18G8TZ236VK0P&sprefix=raspberry+pi%2Caps%2C155&ref=nb_sb_noss_1)
+- **Power**: Micro USB for older models or USB C charger for newer models
+- **Purchase**: Available on [Amazon](https://www.amazon.com/s?k=raspberry+pi)
 
 ## Setup Instructions
 
 ### Option 1: Linode Ubuntu Instance
 
-1. Set up and SSH into a [Linode](https://www.linode.com/) instance using Ubuntu OS
-2. Run the setup script: `bash ./setup.sh`
-3. Add the following to the end of the `.bashrc` file: `source /root/config.sh`
-4. Re-source the `.bashrc` file: `source .bashrc`
-5. Install Docker following the official guide: https://docs.docker.com/engine/install/
-6. Run nc-collector's `get_going.sh` script to get Notify Cyber running
+1. Set up and SSH into a [Linode](https://www.linode.com/) instance running Ubuntu
+2. Execute the setup script: `bash ./setup.sh`
+3. Add the following line to the end of your `.bashrc` file: `source /root/config.sh`
+4. Reload the `.bashrc` file: `source .bashrc`
+5. Install Docker following the [official installation guide](https://docs.docker.com/engine/install/)
+6. Run the `get_going.sh` script to start Notify Cyber
 
 ### Option 2: Raspberry Pi
 
-1. **Prepare the Pi**:
-
-   - Download Raspberry Pi OS Lite from: https://www.raspberrypi.com/software/operating-systems/
-   - Choose 64-bit for newer models, 32-bit for older models like 3B+
-   - Flash the OS using Raspberry Pi Imager: https://www.raspberrypi.com/software/
+1. **Prepare the Raspberry Pi**:
+   - Download Raspberry Pi OS Lite from the [official website](https://www.raspberrypi.com/software/operating-systems/)
+   - Choose 64 bit for newer models or 32 bit for older models like the 3B+
+   - Flash the OS using [Raspberry Pi Imager](https://www.raspberrypi.com/software/)
 
 2. **Initial Setup**:
+   - Boot the Pi and complete the initial setup process
+   - Enable SSH if needed for remote access
+   - Update the system packages: `sudo apt update && sudo apt upgrade -y`
 
-   - Boot the Pi and complete initial setup
-   - Enable SSH if needed
-   - Update the system: `sudo apt update && sudo apt upgrade -y`
-
-3. **Run Setup**:
-
-   - Run the setup script: `bash ./setup.sh`
-   - The config will be automatically added to your `.profile` (not `.bashrc` on Pi)
+3. **Run Setup Script**:
+   - Execute the setup script: `bash ./setup.sh`
+   - The configuration will be automatically added to your `.profile` file
 
 4. **Install Docker**:
+   - Follow the [official Docker installation guide](https://docs.docker.com/engine/install/raspberry-pi-os/) for Raspberry Pi OS
+   - Alternatively, use the convenience script: `curl -fsSL https://get.docker.com -o get-docker.sh && sh get-docker.sh`
+   - Add your user to the docker group: `sudo usermod -aG docker $USER`
+   - Reboot or log out and back in for the changes to take effect
 
-   - Follow the official Docker installation guide for Raspberry Pi OS: https://docs.docker.com/engine/install/raspberry-pi-os/
-   - Or use the convenience script: `curl -fsSL https://get.docker.com -o get-docker.sh && sh get-docker.sh`
-   - Add user to docker group: `sudo usermod -aG docker $USER`
-   - Reboot or log out/in for changes to take effect
-
-5. **Run Collector**:
-   - Run nc-collector's `get_going.sh` script to get Notify Cyber running
+5. **Start the Collector**:
+   - Run the `get_going.sh` script to start Notify Cyber
