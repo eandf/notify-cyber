@@ -1,0 +1,16 @@
+.container {
+  border: 2px solid #d3d3d3;
+  /* width: 100%; */
+  margin: 0.5em 0;
+  /* display: flex; */
+  background-color: white;
+  padding: 0.5em;
+  border-radius: 0.5em;
+  color: var(--primary-color);
+  transition: all 0.3s ease;
+}
+
+.container:hover {
+  border-color: #a4a4a4;
+  cursor: pointer;
+}

@@ -1,0 +1,27 @@
+.title {
+  font-weight: 700;
+  font-size: 1.5em;
+}
+
+.title a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.subtitle {
+  font-size: 1em;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.6);
+  background-color: white;
+  margin-bottom: 0.5em;
+}
+
+.info {
+  width: 100%;
+  background-color: white;
+}
+
+.desc {
+  color: black;
+  background-color: white;
+}

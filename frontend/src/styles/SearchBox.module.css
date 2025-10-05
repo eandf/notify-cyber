@@ -1,0 +1,26 @@
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.input {
+  border: 2px solid #d3d3d3;
+  border-radius: 0.5em;
+  height: 100%;
+  width: 100%;
+  min-width: 4em;
+  background-color: white;
+  padding: 0.5em;
+}
+
+.input:focus {
+  border: 2px solid #a4a4a4;
+}
+
+.icon {
+  font-size: 2em;
+  fill: var(--primary-color);
+  margin-right: 0.2em;
+}

@@ -1,0 +1,46 @@
+.filtercontainer {
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: var(--content-width);
+  z-index: 1002;
+  margin-top: 0.5rem;
+  max-height: 2rem;
+  flex-shrink: 0;
+}
+
+.searchbar {
+  height: 100%;
+  width: 50%;
+  margin-right: auto;
+}
+
+.rssbutton {
+  height: 100%;
+  aspect-ratio: 1;
+  margin-left: 0.5rem;
+}
+
+.rssbutton:hover {
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+  .searchbar {
+    width: 100%;
+    margin-right: 0.5em;
+  }
+}
+
+@media only screen and (max-width: 370px) {
+  .filtercontainer {
+    flex-direction: column;
+  }
+
+  .searchbar {
+    margin-bottom: 0.5em;
+    margin-right: 0;
+  }
+}
+
