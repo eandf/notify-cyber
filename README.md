@@ -1,8 +1,8 @@
-<div align="center">
-  <img src="./assets/images/logo_circle.png" alt="Notify Cyber Logo" width="200"/>
-</div>
-
 <h1 align="center">Notify Cyber</h1>
+
+<div align="center">
+  <img src="./assets/images/background2.png" alt="Notify Cyber Logo" width="1000"/>
+</div>
 
 ## Table of Contents
 
@@ -21,7 +21,7 @@
 
 ## Overview
 
-Notify Cyber was a dynamic cybersecurity news aggregation platform created by Mehmet Yilmaz and Dylan Eck in May 2023. It operated from June 1, 2023, to October 31, 2025, successfully providing timely and relevant security news to over 17,000 visitors. The project gained initial visibility through a popular Reddit post and created numerous opportunities for its developers. This repository now hosts a static, open source version of the original website, preserving its design and functionality as a snapshot in time.
+Notify Cyber was a dynamic cybersecurity news aggregation platform created by **Mehmet Yilmaz** and **Dylan Eck** in **May 2023**. It operated from **June 1, 2023** to **October 31, 2025** where it successfully provided timely and relevant security news to over 17,000 visitors. The project gained initial visibility through a popular Reddit post and created numerous opportunities for its developers. This repository now hosts a static, open source version of the original website, preserving its design and functionality as a snapshot in time.
 
 ## Project Vision
 
@@ -45,7 +45,7 @@ A PostgreSQL database serves as the central repository for all aggregated news c
 
 ### API
 
-A lightweight API provides the necessary endpoints for the frontend to interact with the database. It handles requests for fetching articles, retrieving configuration data, and supporting the search functionality.
+A lightweight Express based API provides the necessary endpoints for the frontend to interact with the database through Supabase. It handles requests for fetching articles with pagination, retrieving configuration data, and supporting search functionality with intelligent stopword filtering. The API is designed to run as a serverless function on Vercel.
 
 ## Features
 
@@ -60,8 +60,8 @@ A lightweight API provides the necessary endpoints for the frontend to interact 
 - **Frontend**: Next.js, React, TypeScript, CSS Modules
 - **Backend Collector**: Python, Docker
 - **Database**: PostgreSQL
-- **API**: Node.js
-- **Deployment**: Vercel, Linode
+- **API**: Node.js, Express.js
+- **Deployment**: Vercel (Frontend & API), Linode (Collector)
 
 ## Getting Started
 
@@ -70,14 +70,14 @@ To get the full Notify Cyber platform running, you should set up the components 
 1.  **Database**: Begin by setting up the PostgreSQL database. This is the core data store for the application.
     - [Database Setup Instructions](./database/README.md)
 
-2.  **Frontend**: Next, set up the Next.js frontend. This will provide the user interface for viewing the data.
+2.  **API**: Set up the API service to enable communication between the frontend and database.
+    - [API Setup Instructions](./api/README.md)
+
+3.  **Frontend**: Next, set up the Next.js frontend. This will provide the user interface for viewing the data.
     - [Frontend Setup Instructions](./frontend/README.md)
 
-3.  **Collector**: Once the database and frontend are ready, set up the collector to populate the database with news articles.
+4.  **Collector**: Once the database, API, and frontend are ready, set up the collector to populate the database with news articles.
     - [Collector Setup Instructions](./collector/README.md)
-
-4.  **API (Optional)**: The API is an optional component that can be set up if needed.
-    - [API Setup Instructions](./api/README.md)
 
 ## Project Status
 
