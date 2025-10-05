@@ -843,8 +843,6 @@
             searchQuery = e.target.value.trim();
             reloadArticles();
           });
-        } else {
-          console.error("Search input not found!");
         }
 
         // Toggle dropdown
@@ -954,10 +952,6 @@
 
           articleContainer.appendChild(fragment);
           isLoading = false;
-
-          console.log(
-            `Rendered ${rendered} articles. Total displayed: ${displayedCount}/${allArticles.length}`,
-          );
         }
 
         function reloadArticles() {
@@ -997,15 +991,10 @@
           .then((data) => {
             // Sort by recorded timestamp (largest to smallest)
             allArticles = data.sort((a, b) => b.recorded - a.recorded);
-            console.log(`Loaded ${allArticles.length} articles`);
             renderChunk();
           })
           .catch((error) => {
             console.error("Error loading articles:", error);
-            console.log(
-              "Make sure you are running this via HTTP server (not file://)",
-            );
-            console.log("Run: python3 -m http.server 8000");
           });
 
         // Handle pinned card close button
