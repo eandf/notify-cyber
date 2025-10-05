@@ -1,0 +1,12 @@
+[allowlist]
+  description = "Allowlist configuration"
+
+  # Ignore db.json
+  paths = [
+    '''db\.json'''
+  ]
+
+# Optional: Configure the scan settings
+[extend]
+  # useDefault = true will include all default gitleaks rules
+  useDefault = true
