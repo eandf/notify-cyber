@@ -60,7 +60,7 @@ The ultimate goal of Notify-Cyber is to keep you aware and updated about vulnera
 
 We urge everyone to keep themselves aware of the current cybersecurity landscape, recognizing the pivotal role each of us plays in our own digital safety. Always remember, your cybersecurity begins with you. We invite you all to check out Notify Cyber: https://notifycyber.com/
 
-```toml
+```
 This article was written by the Notify-Cyber team with the help
 of ChatGPT (GPT-3.5). The final draft was proofread, fact checked,
 and edited by the Notify-Cyber team.
