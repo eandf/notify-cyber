@@ -23,13 +23,13 @@ In today’s digital world, cybersecurity is more important than ever. We rely o
 
 One such widely unnoticed threat was the "IndexedDB API information leak" vulnerability in Apple’s Safari browser. The vulnerability was discovered and reported by fraud protection software company FingerprintJS in November 2021 and only affected the Safari web browser. In this vulnerability, when a user visits a website that takes advantage of this vulnerability, the website gains the ability to access the user’s browsing history across various tabs and/or windows. This ultimately could allow the website to uniquely and precisely identify a user based on their activity on other websites, like their Google account [[1]](https://fingerprint.com/blog/indexeddb-api-browser-vulnerability-safari-15/). The vulnerability was later patched by Apple in January 2022 [[2]](https://safarileaks.com/).
 
-<div style="text-align: center;">
+<div style="text-align: left;">
   <a href="https://www.youtube.com/watch?v=Z7dPeGpCl8s">
     Fingerprint - How IndexedDB in Safari 15 leaks your browsing activity (in real time)
   </a>
 </div>
 
-<p align="center"><em>YouTube video by Fingerprint demonstrating the IndexedDB vulnerability</em></p>
+<p align="left"><em>YouTube video by Fingerprint demonstrating the IndexedDB vulnerability</em></p>
 
 During the intervening period, we noticed that many Safari users remained unaware of this vulnerability. Although the issue was eventually covered by various news sources, including The Verge, The Hacker News, Macworld, TechCrunch, The Register, Screen Rant, and SiliconANGLE. To us, it still didn’t receive adequate attention by the general public.
 
@@ -39,13 +39,13 @@ This event highlighted the general lack of knowledge among people regarding cybe
 
 With the emergence of generative AI tools like ChatGPT, staying informed about cybersecurity news and vulnerabilities becomes increasingly important. These tools have the potential to rapidly detect vulnerabilities, leading to the potential of an accelerated rise in exploits like the exploit we discussed earlier [[3]](https://www.youtube.com/watch?v=xoVJKj8lcNQ). Therefore, staying updated on cybersecurity news and emerging threats is now more critical than ever before.
 
-<div style="text-align: center;">
+<div style="text-align: left;">
   <a href="https://www.youtube.com/watch?v=xoVJKj8lcNQ">
     <b>YouTube - The Social Dilemma (2020) - Official Trailer</b>
   </a>
 </div>
 
-<p align="center"><em>At timestamps 00:23:00-00:23:31 and 00:23:31-00:35:48, Tristan Harris and Aza Raskin demonstrate the potential risks AI technologies can pose in the realm of cybersecurity.</em></p>
+<p align="left"><em>At timestamps 00:23:00-00:23:31 and 00:23:31-00:35:48, Tristan Harris and Aza Raskin demonstrate the potential risks AI technologies can pose in the realm of cybersecurity.</em></p>
 <style>
 p + p {
   margin-top: 0;
