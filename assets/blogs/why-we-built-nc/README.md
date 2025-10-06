@@ -46,11 +46,6 @@ With the emergence of generative AI tools like ChatGPT, staying informed about c
 </div>
 
 <p align="left"><em>At timestamps 00:23:00-00:23:31 and 00:23:31-00:35:48, Tristan Harris and Aza Raskin demonstrate the potential risks AI technologies can pose in the realm of cybersecurity.</em></p>
-<style>
-p + p {
-  margin-top: 0;
-}
-</style>
 
 To protect yourself, it is essential to stay informed about cybersecurity events related to the software you use on a daily basis. This is where our platform, Notify-Cyber (https://notifycyber.com/), comes in. Notify-Cyber is an all-in-one cybersecurity news platform that simplifies staying informed about cybersecurity events. Notify Cyber aggregates the latest cybersecurity news from various sources all into one news feed. Making it easy to get a general overview of the current cybersecurity news scape.
 
