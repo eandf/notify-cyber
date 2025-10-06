@@ -32,6 +32,22 @@ The vision behind Notify Cyber was to create a centralized and personalized plat
 
 The complete dataset of all cybersecurity news articles collected and displayed throughout Notify Cyber's operation is available in [`./docs/db.json`](./docs/db.json). This file contains the entire collection of articles aggregated during the platform's active period.
 
+## Architecture Overview
+
+Notify Cyber was built as a distributed system leveraging free-tier cloud services and local infrastructure. Here's how everything worked together:
+
+**Domain & Hosting**: The domain was originally registered through Google Domains (now SquareSpace Domains). The entire frontend and all serverless functions were hosted on Vercel's free plan, which also provided web analytics for tracking site usage.
+
+**Database**: A single PostgreSQL table hosted on Supabase's free tier served as the central data repository. This simple yet effective design stored all aggregated cybersecurity news articles with their metadata.
+
+**Collector Infrastructure**: The collector ran 1-2 times daily to update the database. It was primarily hosted on a personal Raspberry Pi 3B+ at home, with failover to a Linode instance during travel. The collector operated as a Docker container on Debian-based Linux, using various scraping tools including requests, BeautifulSoup, cloudscraper, and newspaper3k. Notably, no browser-rendering scraping was required—all content was successfully extracted without JavaScript rendering.
+
+**Data Sources & Processing**: Initially, the system cloned the entire CVEProject/cvelist repository (https://github.com/CVEProject/cvelist) to parse thousands of JSON-formatted CVE records. However, this approach proved computationally intensive and was eventually replaced with more efficient request + BeautifulSoup methods. Article summarization evolved through three OpenAI models: starting with gpt-3.5-turbo, upgrading to gpt-3.5-turbo-16k for longer content, and finally settling on gpt-4o-mini for optimal cost and performance.
+
+**Data Pipeline**: The collector would fetch raw article data, clean and normalize it, generate AI-powered summaries via OpenAI's API, and push the processed content directly to the Supabase database.
+
+**API Purpose**: The Express-based API wasn't essential for Notify Cyber's core functionality. It was deployed primarily to enable other projects, such as TARS (https://github.com/MehmetMHY/TARS), to easily consume the cybersecurity news database.
+
 ## Core Components
 
 The Notify Cyber ecosystem consists of several key components working together to deliver a seamless user experience.
