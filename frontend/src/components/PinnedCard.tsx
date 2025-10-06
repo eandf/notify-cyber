@@ -41,7 +41,7 @@ export default function PinnedCard({
       </span>
       <p>
       Discover the latest cybersecurity news from the past 7 days, gathered from various sources, all in one place! Join our{" "}
-        <a href="https://forms.gle/qcJsgfu8BZJJvSAQ8" target="_blank" rel="noopener noreferrer">
+        <a href={process.env.NEXT_PUBLIC_WAITLIST_URL} target="_blank" rel="noopener noreferrer">
           waitlist
         </a> for possible future updates/features!
       </p>

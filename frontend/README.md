@@ -8,9 +8,20 @@ This is the frontend web application for [Notify Cyber](https://notifycyber.com/
 
 1. Clone the project and run `npm install` in the root directory to install the required packages.
 
-2. Create a file called `.env.local` in the root directory and populate it with the environment variables listed in `.env.local.template`.
+2. Create a file called `.env.local` in the root directory and populate it with the environment variables listed in `.env.local.template` (see Environment Variables section below).
 
 3. Run `npm run dev` to start the development server. Terminal output will tell you what port the server is running on.
+
+## Environment Variables
+
+The following environment variables must be defined in `.env.local` for local development:
+
+| Variable                   | Description                                                                                         |
+| -------------------------- | --------------------------------------------------------------------------------------------------- |
+| `SUPABASE_URL`             | The URL of your Supabase project                                                                    |
+| `SUPABASE_SECRET_KEY`      | The secret API key for your Supabase project                                                        |
+| `SUPABASE_MAIN_TABLE`      | The name of the main table in your Supabase database                                                |
+| `NEXT_PUBLIC_WAITLIST_URL` | The embedded link URL for the [Google Forms](https://workspace.google.com/products/forms/) waitlist |
 
 <br>
 
