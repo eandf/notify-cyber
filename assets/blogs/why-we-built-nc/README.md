@@ -15,8 +15,6 @@
 - Notify-Cyber is a service that aims to keep the general public more aware of cybersecurity threats by aggregating the latest cybersecurity news from various sources into one news feed. Notify-Cyber can be accessed here: https://notifycyber.com/
 - Notify-Cyber plans to launch a personalized email alert service which will provide timely notifications about relevant cybersecurity vulnerabilities. The waitlist can be joined at: https://notifycyber.com/join
 
-<h1 align="center">• • • </h1>
-
 ## Article
 
 In today’s digital world, cybersecurity is more important than ever. We rely on our devices for everything from work to entertainment, making us constantly vulnerable to cyber threats. Unfortunately, many people only pay attention to cybersecurity issues when they become catastrophic, such as large data breaches or high-profile ransomware attacks. This lack of awareness leaves individuals susceptible to subtle yet equally dangerous threats.
