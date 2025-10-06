@@ -50,6 +50,8 @@ A PostgreSQL database serves as the central repository for all aggregated news c
 
 ### API
 
+**_Note:_** While the API was used for other projects, it is not needed for the core functionality of Notify Cyber.
+
 A lightweight Express based API provides the necessary endpoints for the frontend to interact with the database through Supabase. It handles requests for fetching articles with pagination, retrieving configuration data, and supporting search functionality with intelligent stopword filtering. The API is designed to run as a serverless function on Vercel.
 
 ## Features
