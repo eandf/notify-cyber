@@ -22,7 +22,3 @@ This static site is configured to be served via GitHub Pages, preserving public 
 ## Dataset
 
 The `db.json` file contains the complete collection of cybersecurity news articles that were aggregated and displayed throughout Notify Cyber's operation from June 1, 2023 to October 5, 2025. This dataset is available for researchers, developers, and cybersecurity professionals to explore.
-
-## Maintenance Script
-
-The `reduce_db_size.py` script is available for reducing the size of `db.json` if needed for hosting or distribution purposes.
