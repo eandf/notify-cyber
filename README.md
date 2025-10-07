@@ -54,21 +54,19 @@ The Notify Cyber ecosystem consists of several key components working together t
 
 ### Frontend
 
-The user interface is a modern web application built with Next.js and React. It provides a clean, intuitive, and responsive design for browsing news articles. Key aspects of the frontend include an infinitely scrollable article list, robust search and filtering options, and a dedicated about page. The frontend was designed for easy deployment on Vercel.
+The user interface is a modern web application built with Next.js and React. It provides a clean, intuitive, and responsive design for browsing news articles. Key aspects of the frontend include an infinitely scrollable article list, robust search and filtering options, and a dedicated about page. The frontend was designed for easy deployment on **Vercel**.
 
 ### Collector
 
-The collector is a Python based service responsible for populating our database. It systematically scrapes various cybersecurity news sources from the internet, processes the collected data for consistency, and structures it for storage. The collector is designed to run within a Docker container, ensuring a consistent and isolated environment for its operations. It can be deployed on cloud instances like Linode or on local hardware such as a Raspberry Pi.
+The collector is a Python based service responsible for populating our database. It systematically scrapes various cybersecurity news sources from the internet, processes the collected data for consistency, and structures it for storage. The collector is designed to run within a Docker container, ensuring a consistent and isolated environment for its operations. It can be deployed on cloud instances like **Linode** or on local hardware such as a **Raspberry Pi**.
 
 ### Database
 
-A PostgreSQL database serves as the central repository for all aggregated news content. The primary table, `cybernews`, stores essential information for each article, including its source, URL, title, and publication date. The database schema is straightforward and optimized for efficient querying. A collection of SQL tools is available for database maintenance and analysis.
+A PostgreSQL database serves as the central repository for all aggregated news content. The primary table, `cybernews`, stores essential information for each article, including its source, URL, title, and publication date. The database schema is straightforward and optimized for efficient querying. A collection of SQL tools is available for database maintenance and analysis. This database in production was hosted on **Supabase**.
 
 ### API
 
-**_Note:_** While the API was used for other projects, it is not needed for the core functionality of Notify Cyber.
-
-A lightweight Express based API provides the necessary endpoints for the frontend to interact with the database through Supabase. It handles requests for fetching articles with pagination, retrieving configuration data, and supporting search functionality with intelligent stopword filtering. The API is designed to run as a serverless function on Vercel.
+Before continuing, please note that while this API was used for other projects, it is not required for Notify Cyber's core functionality. It is a lightweight Express-based API that provides endpoints for the frontend to interact with the database via Supabase. It supports fetching articles with pagination, retrieving configuration data, and intelligent search with stopword filtering. The API is designed to run as a serverless function on **Vercel**.
 
 ## Features
 
