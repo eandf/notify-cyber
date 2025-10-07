@@ -30,7 +30,7 @@ The vision behind Notify Cyber was to create a centralized and personalized plat
 
 ## Dataset
 
-The complete dataset of all cybersecurity news articles collected and displayed throughout Notify Cyber's operation is available in [./docs/db.json](./docs/db.json). This file contains the entire collection of articles aggregated during the platform's active period.
+The entire database of cybersecurity news articles collected throughout Notify Cyber's operation is available in two locations: [./docs/db.json](./docs/db.json) contains the dataset used for the static site, while [./assets/backups/backup_nc_1759690168.json.zip](./assets/backups/backup_nc_1759690168.json.zip) contains the complete, unfiltered database backup.
 
 ## Architecture Overview
 
