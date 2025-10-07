@@ -90,6 +90,12 @@
         box-sizing: border-box;
       }
 
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
       html {
         scroll-behavior: smooth;
       }
@@ -115,6 +121,13 @@
         color: var(--text-primary);
         background-color: var(--bg-primary);
         overflow-x: hidden;
+        width: 100%;
+        max-width: 100vw;
+      }
+
+      html {
+        overflow-x: hidden;
+        width: 100%;
       }
 
       /* Navigation */
@@ -210,6 +223,9 @@
         color: white;
         position: relative;
         overflow: hidden;
+        width: 100%;
+        max-width: 100vw;
+        box-sizing: border-box;
       }
 
       .hero::before {
@@ -335,6 +351,10 @@
       /* Sections */
       .section {
         padding: 4rem 2rem;
+        width: 100%;
+        max-width: 100vw;
+        box-sizing: border-box;
+        overflow-x: hidden;
       }
 
       .section:nth-child(even) {
@@ -345,6 +365,8 @@
         max-width: 1200px;
         margin: 0 auto;
         padding: 0 2rem;
+        width: 100%;
+        box-sizing: border-box;
       }
 
       .section-header {
@@ -372,6 +394,8 @@
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 2rem;
         margin-top: 2rem;
+        width: 100%;
+        box-sizing: border-box;
       }
 
       .content-card {
@@ -651,6 +675,11 @@
 
         .section {
           padding: 3rem 1rem;
+          margin: 0;
+        }
+
+        * {
+          max-width: 100%;
         }
 
         .section-title {
@@ -660,6 +689,18 @@
         .logo-image {
           margin: 1rem auto 2rem;
           max-width: 90%;
+        }
+
+        .container {
+          padding: 0 1rem;
+        }
+
+        .hero-content {
+          padding: 0 1rem;
+        }
+
+        .section-header {
+          padding: 0 0.5rem;
         }
 
         .hero-buttons {
@@ -698,10 +739,25 @@
 
         .content-grid {
           grid-template-columns: 1fr;
+          gap: 1rem;
         }
 
         .stats-grid {
-          grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+          grid-template-columns: repeat(2, 1fr);
+          gap: 1rem;
+        }
+
+        .stat-card {
+          padding: 1rem;
+        }
+
+        .content-card {
+          padding: 1.5rem;
+        }
+
+        .warning-box {
+          margin: 1rem 0;
+          padding: 1rem;
         }
 
         .stat-number {
@@ -944,8 +1000,7 @@
         <div class="section-header fade-in">
           <h2 class="section-title">The Team</h2>
           <p class="section-subtitle">
-            Meet the two developers who built Notify Cyber
-            visitors.
+            Meet the two developers who built Notify Cyber visitors.
           </p>
         </div>
 
@@ -985,8 +1040,7 @@
             padding: 2rem;
             border-radius: 1rem;
           "
-        >
-        </div>
+        ></div>
       </div>
     </section>
 
