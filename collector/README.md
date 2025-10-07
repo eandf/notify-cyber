@@ -29,7 +29,7 @@ Run `./start.sh` to automatically build and run the Docker container.
 
 3. Install and set up [Docker](https://www.docker.com/) on your system.
 
-   **Note**: For deployment on Linode or Raspberry Pi, refer to the host setup section below for automated configuration scripts.
+   **Note**: For deployment on Linode or Raspberry Pi, refer to the [host setup section](./host/README.md) below for automated configuration scripts.
 
 4. Build the docker image for this project:
 
@@ -104,7 +104,7 @@ This section provides guidance for deploying the Notify Cyber collector on vario
 2. Run the setup script: `bash ./setup.sh`
 3. Add the following to the end of the `.bashrc` file: `source /root/config.sh`
 4. Re-source the `.bashrc` file: `source .bashrc`
-5. Install Docker following the official guide: https://docs.docker.com/engine/install/
+5. Install Docker following the [official guide](https://docs.docker.com/engine/install/)
 6. Run nc-collector's `get_going.sh` script to get Notify Cyber running
 
 #### Option 2: Raspberry Pi

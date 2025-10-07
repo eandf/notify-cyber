@@ -99,4 +99,4 @@ The script will prompt you for the number of hashes to generate, then automatica
 
 ## Implementation Notes
 
-The API uses English stopwords for search optimization to filter out common words that don't contribute to search relevance. The stopword list is based on the [stopwords-en](https://github.com/interup/stopwords-en) package and stored locally in `stopwords-en.json`.
+The API uses English stopwords for search optimization to filter out common words that don't contribute to search relevance. The stopword list is based on the [stopwords-en package](https://github.com/interup/stopwords-en) and stored locally in `stopwords-en.json`.

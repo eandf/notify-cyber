@@ -26,11 +26,11 @@ Notify Cyber was a dynamic cybersecurity news aggregation platform created by **
 
 ## Project Vision
 
-The vision behind Notify Cyber was to create a centralized and personalized platform for cybersecurity news. We aimed to simplify how professionals and enthusiasts stay informed about the latest digital threats and vulnerabilities. By aggregating information from trusted sources and offering powerful filtering capabilities, the platform allowed users to receive a newsfeed tailored to the hardware and software they care about most, complete with email notifications and a robust search engine. For a deeper dive into the motivation and story behind Notify Cyber's creation, read the original launch blog post: [Why We Built Notify Cyber](./assets/blogs/why-we-built-nc/README.md).
+The vision behind Notify Cyber was to create a centralized and personalized platform for cybersecurity news. We aimed to simplify how professionals and enthusiasts stay informed about the latest digital threats and vulnerabilities. By aggregating information from trusted sources and offering powerful filtering capabilities, the platform allowed users to receive a newsfeed tailored to the hardware and software they care about most, complete with email notifications and a robust search engine. For a deeper dive into the motivation and story behind Notify Cyber's creation, read the [original launch blog post](./assets/blogs/why-we-built-nc/README.md).
 
 ## Dataset
 
-The complete dataset of all cybersecurity news articles collected and displayed throughout Notify Cyber's operation is available in [`./docs/db.json`](./docs/db.json). This file contains the entire collection of articles aggregated during the platform's active period.
+The complete dataset of all cybersecurity news articles collected and displayed throughout Notify Cyber's operation is available in [./docs/db.json](./docs/db.json). This file contains the entire collection of articles aggregated during the platform's active period.
 
 ## Architecture Overview
 
@@ -42,11 +42,11 @@ Notify Cyber was built as a distributed system leveraging free-tier cloud servic
 
 **Collector Infrastructure**: The collector ran 1-2 times daily to update the database. It was primarily hosted on a personal Raspberry Pi 3B+ at home, with failover to a Linode instance during travel. The collector operated as a Docker container on Debian-based Linux, using various scraping tools including requests, BeautifulSoup, cloudscraper, and newspaper3k. Notably, no browser-rendering scraping was required—all content was successfully extracted without JavaScript rendering.
 
-**Data Sources & Processing**: Initially, the system cloned the entire CVEProject/cvelist repository (https://github.com/CVEProject/cvelist) to parse thousands of JSON-formatted CVE records. However, this approach proved computationally intensive and was eventually replaced with more efficient request + BeautifulSoup methods. Article summarization evolved through three OpenAI models: starting with gpt-3.5-turbo, upgrading to gpt-3.5-turbo-16k for longer content, and finally settling on gpt-4o-mini for optimal cost and performance.
+**Data Sources & Processing**: Initially, the system cloned the entire [CVEProject/cvelist repository](https://github.com/CVEProject/cvelist) to parse thousands of JSON-formatted CVE records. However, this approach proved computationally intensive and was eventually replaced with more efficient request + BeautifulSoup methods. Article summarization evolved through three OpenAI models: starting with gpt-3.5-turbo, upgrading to gpt-3.5-turbo-16k for longer content, and finally settling on gpt-4o-mini for optimal cost and performance.
 
 **Data Pipeline**: The collector would fetch raw article data, clean and normalize it, generate AI-powered summaries via OpenAI's API, and push the processed content directly to the Supabase database.
 
-**API Purpose**: The Express-based API wasn't essential for Notify Cyber's core functionality. It was deployed primarily to enable other projects, such as TARS (https://github.com/MehmetMHY/TARS), to easily consume the cybersecurity news database.
+**API Purpose**: The Express-based API wasn't essential for Notify Cyber's core functionality. It was deployed primarily to enable other projects, such as [TARS](https://github.com/MehmetMHY/TARS), to easily consume the cybersecurity news database.
 
 ## Core Components
 
@@ -104,4 +104,4 @@ Notify Cyber was officially retired on **October 5, 2025**. The decision was mad
 
 ## License
 
-This project is licensed under the **GNU General Public License v3.0**. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the **Apache License 2.0**. See the [LICENSE](LICENSE) file for details.
