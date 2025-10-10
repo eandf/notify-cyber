@@ -22,7 +22,7 @@
 
 ## Overview
 
-Notify Cyber was a dynamic cybersecurity news aggregation platform created by **Mehmet Yilmaz** and **Dylan Eck** in **May 2023**. It operated from **June 1, 2023** to **October 5, 2025** where it successfully provided timely and relevant security news to **over 17,000 visitors**. The project gained initial visibility through a popular Reddit post and created numerous opportunities for its developers. This repository now hosts a static, open source version of the original website, preserving its design and functionality as a snapshot in time.
+Notify Cyber was a dynamic cybersecurity news aggregation platform created by **Mehmet Yilmaz** and **Dylan Eck** in **February 2023**. It operated from **June 1, 2023** to **October 5, 2025** where it successfully provided timely and relevant security news to **over 17,000 visitors**. The project gained initial visibility through a popular Reddit post and created numerous opportunities for its developers. This repository now hosts a static, open source version of the original website, preserving its design and functionality as a snapshot in time.
 
 ## Project Vision
 

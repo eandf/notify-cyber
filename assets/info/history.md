@@ -15,8 +15,7 @@
     - People wanted to make their own filters, not just be limited to 4 options.
 - On April 21, 2022, this repo was made: https://github.com/MehmetMHY/thn-api
   - This repo contained the "The Hacker News" web scraper that was developed for the Discord bot. It was made in the hopes that it would help some people out (if needed).
-- On around January 20, 2023 notify-cyber (NC) was created. It was initially developed for a Hackathon hosted by Courier on the Devpost platform. As the Hackathon went on, Mehmet and Dylan dropped the Hackathon because they confirmed that Courier's API is NOT ideal/designed-for what notify-cyber is trying to do.
-- On around February 17, 2023, Mehmet and Dylan brought this project back to life and decided to make this into a product rather than just a project for a Hackathon.
+- On around February 2023, notify-cyber (NC) was created. It was initially developed for a Hackathon hosted by Courier on the Devpost platform. As the Hackathon went on, Mehmet and Dylan dropped the Hackathon because they confirmed that Courier's API is NOT ideal/designed-for what notify-cyber is trying to do. They then decided to make this into a product rather than just a project for a Hackathon.
 - The main logo for Notify-Cyber started development on 3-10-2023. The exact date the logo was "completed" is not known but it's estimated that the logo was completed around 3-13-2023 and was modified here and there until 4-27-2023. The logo was created through these methods:
   - The "draft" for the logo was generated through OpenAI's DALL-E-2 with the following prompt:
     ```
