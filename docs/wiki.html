@@ -270,38 +270,6 @@
         font-weight: 400;
       }
 
-      .status-badge {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.5rem;
-        background: rgba(220, 38, 38, 0.2);
-        border: 2px solid rgba(220, 38, 38, 0.3);
-        color: #fecaca;
-        padding: 0.75rem 1.5rem;
-        border-radius: 9999px;
-        font-weight: 600;
-        font-size: 1rem;
-        margin-bottom: 2rem;
-      }
-
-      .status-indicator {
-        width: 8px;
-        height: 8px;
-        background: #fecaca;
-        border-radius: 50%;
-        animation: pulse 2s infinite;
-      }
-
-      @keyframes pulse {
-        0%,
-        100% {
-          opacity: 1;
-        }
-        50% {
-          opacity: 0.5;
-        }
-      }
-
       .hero-buttons {
         display: flex;
         gap: 1rem;
@@ -402,23 +370,14 @@
         box-shadow: var(--shadow-md);
         border: 1px solid var(--border-color);
         transition: all 0.3s ease;
+        min-height: 280px;
+        display: flex;
+        flex-direction: column;
       }
 
       .content-card:hover {
         transform: translateY(-4px);
         box-shadow: var(--shadow-xl);
-      }
-
-      .card-icon {
-        width: 48px;
-        height: 48px;
-        background: var(--gradient-bg);
-        border-radius: 0.75rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 1.5rem;
-        font-size: 1.5rem;
       }
 
       .card-title {
@@ -431,6 +390,7 @@
       .card-text {
         color: var(--text-secondary);
         line-height: 1.6;
+        flex-grow: 1;
       }
 
       /* Video Section */
@@ -848,35 +808,23 @@
           Cybersecurity news aggregation platform that simplified staying
           informed about security threats and vulnerabilities
         </p>
-        <div class="status-badge">
-          <span class="status-indicator"></span>
-          Retired As Of October 2025
-        </div>
-        <div class="hero-buttons">
-          <a
-            href="https://github.com/interup/notify-cyber"
-            class="btn btn-secondary"
-            >View Source Code</a
-          >
-        </div>
         <p
           style="
-            margin-top: 1.5rem;
+            margin-top: 2.5rem;
             font-size: 1rem;
             color: white;
             text-align: center;
             font-weight: 500;
           "
         >
-          Visit the
           <a
             href="https://notifycyber.com/"
             target="_blank"
             rel="noopener noreferrer"
             style="color: white; text-decoration: underline; font-weight: 600"
-            >original site</a
+            >Website</a
           >
-          • Follow us on
+          •
           <a
             href="https://x.com/notify_cyber"
             target="_blank"
@@ -884,13 +832,21 @@
             style="color: white; text-decoration: underline; font-weight: 600"
             >Twitter/X</a
           >
-          • Read our
+          •
           <a
-            href="https://medium.com/@notify-cyber"
+            href="https://mehmetmhy.com/posts/"
             target="_blank"
             rel="noopener noreferrer"
             style="color: white; text-decoration: underline; font-weight: 600"
-            >blogs</a
+            >Blogs</a
+          >
+          •
+          <a
+            href="https://github.com/interup/notify-cyber"
+            target="_blank"
+            rel="noopener noreferrer"
+            style="color: white; text-decoration: underline; font-weight: 600"
+            >Code</a
           >
         </p>
       </div>
@@ -949,7 +905,6 @@
 
         <div class="content-grid">
           <div class="content-card fade-in">
-            <div class="card-icon">🔍</div>
             <h3 class="card-title">Multi-Source Aggregation</h3>
             <p class="card-text">
               Aggregated cybersecurity news from trusted sources like CISA, Dark
@@ -958,7 +913,6 @@
             </p>
           </div>
           <div class="content-card fade-in">
-            <div class="card-icon">🤖</div>
             <h3 class="card-title">AI-Generated Summaries</h3>
             <p class="card-text">
               Every article came with an LLM-generated, hook-style summary to
@@ -967,7 +921,6 @@
             </p>
           </div>
           <div class="content-card fade-in">
-            <div class="card-icon">🔄</div>
             <h3 class="card-title">Real-Time Updates</h3>
             <p class="card-text">
               Dockerized, self-healing collector with automated scraping that
@@ -976,7 +929,6 @@
             </p>
           </div>
           <div class="content-card fade-in">
-            <div class="card-icon">🌐</div>
             <h3 class="card-title">Rich Web Interface</h3>
             <p class="card-text">
               Live search, source filters, infinite scroll, responsive design,
@@ -984,7 +936,6 @@
             </p>
           </div>
           <div class="content-card fade-in">
-            <div class="card-icon">📧</div>
             <h3 class="card-title">Email Alerts (Planned)</h3>
             <p class="card-text">
               Built a waitlist for personalized email notifications about
@@ -1063,7 +1014,6 @@
             class="content-card fade-in"
             style="text-decoration: none; color: inherit; display: block"
           >
-            <div class="card-icon">🔓</div>
             <h3 class="card-title">Full Source Code</h3>
             <p class="card-text">
               Complete Next.js frontend, Python scraper, Docker configs, and
@@ -1076,7 +1026,6 @@
             class="content-card fade-in"
             style="text-decoration: none; color: inherit; display: block"
           >
-            <div class="card-icon">📚</div>
             <h3 class="card-title">Setup Documentation</h3>
             <p class="card-text">
               Step-by-step guides to run Notify Cyber locally. Includes Docker
@@ -1088,7 +1037,6 @@
             class="content-card fade-in"
             style="text-decoration: none; color: inherit; display: block"
           >
-            <div class="card-icon">🌐</div>
             <h3 class="card-title">Self-Hosted Setup</h3>
             <p class="card-text">
               Run the complete Notify Cyber platform locally. Follow the GitHub
@@ -1112,7 +1060,6 @@
 
         <div class="content-grid">
           <div class="content-card fade-in">
-            <div class="card-icon">🌐</div>
             <h3 class="card-title">Frontend</h3>
             <p
               class="card-text"
@@ -1130,7 +1077,6 @@
           </div>
 
           <div class="content-card fade-in">
-            <div class="card-icon">🔬</div>
             <h3 class="card-title">Scraper</h3>
             <p
               class="card-text"
@@ -1148,7 +1094,6 @@
           </div>
 
           <div class="content-card fade-in">
-            <div class="card-icon">🗄️</div>
             <h3 class="card-title">Database</h3>
             <p
               class="card-text"
@@ -1192,9 +1137,6 @@
               Developed the platform with news aggregation, AI summaries, and a
               clean web interface for cybersecurity professionals.
             </p>
-            <div class="journey-icon" style="color: var(--primary-color)">
-              💡
-            </div>
           </div>
           <div
             class="journey-card fade-in"
@@ -1210,16 +1152,13 @@
               Launched publicly with zero marketing budget. Posted on Reddit
               r/cybersecurity and waited to see what would happen.
             </p>
-            <div class="journey-icon" style="color: var(--primary-color)">
-              🚀
-            </div>
           </div>
           <div
             class="journey-card fade-in"
             style="background: white; color: var(--text-primary)"
           >
             <div class="journey-date" style="color: var(--text-secondary)">
-              March-April 2023
+              March - April 2023
             </div>
             <h3 class="journey-title" style="color: var(--text-primary)">
               Viral Growth
@@ -1237,9 +1176,6 @@
               with 65K views and 96% upvote rate. Site grew to 17K+ visitors and
               160+ email signups organically.
             </p>
-            <div class="journey-icon" style="color: var(--primary-color)">
-              📈
-            </div>
           </div>
           <div
             class="journey-card fade-in"
@@ -1255,9 +1191,6 @@
               Couldn't find sustainable monetization despite strong usage.
               Decided to open-source everything for the community.
             </p>
-            <div class="journey-icon" style="color: var(--primary-color)">
-              🔓
-            </div>
           </div>
         </div>
       </div>
@@ -1289,7 +1222,6 @@
 
         <div class="content-grid">
           <div class="content-card fade-in">
-            <div class="card-icon">💰</div>
             <h3 class="card-title">Monetization Challenge</h3>
             <p class="card-text">
               Users loved the free service but weren't willing to pay for
@@ -1298,7 +1230,6 @@
             </p>
           </div>
           <div class="content-card fade-in">
-            <div class="card-icon">📈</div>
             <h3 class="card-title">High Operating Costs</h3>
             <p class="card-text">
               Even at $1.85/month (down from $78), the costs added up over time.
@@ -1307,7 +1238,6 @@
             </p>
           </div>
           <div class="content-card fade-in">
-            <div class="card-icon">⏰</div>
             <h3 class="card-title">Time Investment</h3>
             <p class="card-text">
               Maintaining scrapers, monitoring uptime, and handling user support
@@ -1315,7 +1245,6 @@
             </p>
           </div>
           <div class="content-card fade-in">
-            <div class="card-icon">🎯</div>
             <h3 class="card-title">Market Timing</h3>
             <p class="card-text">
               The cybersecurity space became crowded with similar tools.
@@ -1340,7 +1269,6 @@
 
         <div class="content-grid">
           <div class="content-card fade-in">
-            <div class="card-icon">🚀</div>
             <h3 class="card-title">Organic Growth Works</h3>
             <p class="card-text">
               Zero-cost marketing can be incredibly powerful. One Reddit post
@@ -1348,7 +1276,6 @@
             </p>
           </div>
           <div class="content-card fade-in">
-            <div class="card-icon">💰</div>
             <h3 class="card-title">Monetization Is Hard</h3>
             <p class="card-text">
               Having users doesn't guarantee revenue. Plan your business model
@@ -1356,7 +1283,6 @@
             </p>
           </div>
           <div class="content-card fade-in">
-            <div class="card-icon">🌐</div>
             <h3 class="card-title">Open Source Gives Back</h3>
             <p class="card-text">
               When a business model doesn't work, open-sourcing lets the
@@ -1364,7 +1290,6 @@
             </p>
           </div>
           <div class="content-card fade-in">
-            <div class="card-icon">⏰</div>
             <h3 class="card-title">Know Your Capacity</h3>
             <p class="card-text">
               Side projects require ongoing maintenance. Be realistic about your
