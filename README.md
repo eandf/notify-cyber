@@ -9,6 +9,7 @@
 - [Overview](#overview)
 - [Project Vision](#project-vision)
 - [Dataset](#dataset)
+- [Static Site](#static-site)
 - [Core Components](#core-components)
   - [Frontend](#frontend)
   - [Collector](#collector)
@@ -31,6 +32,12 @@ The vision behind Notify Cyber was to create a centralized and personalized plat
 ## Dataset
 
 The entire database of cybersecurity news articles collected throughout Notify Cyber's operation is available in two locations: [./docs/db.json](./docs/db.json) contains the dataset used for the static site, while [./assets/backups/backup_nc_1759690168.json.zip](./assets/backups/backup_nc_1759690168.json.zip) contains the complete, unfiltered database backup.
+
+The `db.json` file contains the complete collection of cybersecurity news articles that were aggregated and displayed throughout Notify Cyber's operation from **June 1, 2023** to **October 5, 2025**. This dataset is available for researchers, developers, and cybersecurity professionals to explore.
+
+## Static Site
+
+This repository includes a static snapshot of the **Notify Cyber** website as it appeared during its final days of operation. The site is preserved as a historical archive and is hosted via **GitHub Pages**, preserving public access to the Notify Cyber platform after its retirement. The static site provides a read-only view of the platform's final state and is configured in the `docs/` directory.
 
 ## Architecture Overview
 

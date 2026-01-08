@@ -1,0 +1,10 @@
+{
+  "overrides": [
+    {
+      "files": "db.json",
+      "options": {
+        "parser": "json"
+      }
+    }
+  ]
+}
