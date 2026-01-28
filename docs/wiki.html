@@ -988,17 +988,6 @@
             </p>
           </div>
         </div>
-
-        <div
-          class="fade-in"
-          style="
-            text-align: center;
-            margin-top: 3rem;
-            background: var(--bg-secondary);
-            padding: 2rem;
-            border-radius: 1rem;
-          "
-        ></div>
       </div>
     </section>
 
@@ -1387,6 +1376,8 @@
 
       window.addEventListener("scroll", () => {
         const nav = document.querySelector(".nav");
+        if (!nav) return;
+
         const scrollTop =
           window.pageYOffset || document.documentElement.scrollTop;
 
