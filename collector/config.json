@@ -16,10 +16,8 @@
     "/app/.env",
     "/Users/optimus/Services/nc-collector/.env",
     "/home/notify-cyber/nc-collector/.env",
-    "/Users/mehmet/SandBox/git/GitHub/interup/nc-collector/.env",
     "/opt/.env",
-    "/root/nc-collector/.env",
-    "/Users/mehmet/SandBox/git/GitHub/eaf/nc-collector/.env"
+    "/root/nc-collector/.env"
   ],
   "api": {
     "max_array_str_size": 3000,
