@@ -1,6 +1,6 @@
 User-agent: *
 Allow: /
-Sitemap: https://docuinsight.ai/sitemap.xml
+Sitemap: https://notifycyber.com/sitemap.xml
 
-# DocuInsight is now retired but open source
+# Notify Cyber is now retired but open source
 # This site documents our journey and lessons learned
