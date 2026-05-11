@@ -7,7 +7,7 @@ import { RefObject, useEffect, useRef } from "react";
 
 const useOutsideClickListener = <T extends HTMLElement>(
   onOutsideClick: () => void,
-  ignoreClicksIn: RefObject<Element>[]
+  ignoreClicksIn: RefObject<Element>[],
 ): RefObject<T> => {
   const ref = useRef<T | null>(null);
 
@@ -20,7 +20,7 @@ const useOutsideClickListener = <T extends HTMLElement>(
           isIgnored = ignoreClicksIn.some(
             (ignoredRef) =>
               ignoredRef.current &&
-              ignoredRef.current.contains(event.target as Node)
+              ignoredRef.current.contains(event.target as Node),
           );
         }
 

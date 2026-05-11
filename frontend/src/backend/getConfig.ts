@@ -13,8 +13,8 @@ export default async function getConfig() {
   };
   logger.info(
     `the endpoint config/ is returning the following config: ${JSON.stringify(
-      apiPublicConfig
-    )}`
+      apiPublicConfig,
+    )}`,
   );
 
   return apiPublicConfig;

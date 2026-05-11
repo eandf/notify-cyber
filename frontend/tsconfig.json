@@ -23,7 +23,7 @@
     // NOTE: if you change this, you will also need to change the webpack
     // import alias configuration in next.config.js
     "paths": {
-      "@/*": ["./*"],
+      "@/*": ["./*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

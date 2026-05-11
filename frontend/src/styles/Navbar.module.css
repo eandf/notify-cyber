@@ -14,7 +14,7 @@
   left: 0;
   width: 10%;
   height: 100%;
-  background-color: #DF3F20;
+  background-color: #df3f20;
   color: white;
   font-weight: 500;
   padding: 0 0.5em 0 0.5em;
@@ -27,7 +27,7 @@
 
 .skip_navigation_link:focus {
   outline: none;
-  transform: translateX(0%  );
+  transform: translateX(0%);
 }
 
 .nav {
@@ -135,7 +135,11 @@
   background-color: white;
   border-radius: 0.1em;
   transform-origin: left center;
-  transition: opacity 200ms ease-in-out, width 200ms ease-in-out, rotate 200ms ease-in-out, translate 200ms ease-in-out;
+  transition:
+    opacity 200ms ease-in-out,
+    width 200ms ease-in-out,
+    rotate 200ms ease-in-out,
+    translate 200ms ease-in-out;
 }
 
 .nav_toggle_show:before {
@@ -156,7 +160,6 @@
 }
 
 @media only screen and (max-width: 900px) {
-
   .ul {
     position: fixed;
     top: 0;
@@ -193,9 +196,10 @@
     margin-top: 1em;
   }
 
-  .ul li, .ul li:first-child {
+  .ul li,
+  .ul li:first-child {
     height: 3.5em;
-    border: none
+    border: none;
   }
 }
 

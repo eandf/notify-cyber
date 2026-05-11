@@ -20,7 +20,7 @@ export interface ArticleProps {
 
 const Article = (
   { article }: ArticleProps,
-  ref: ForwardedRef<HTMLDivElement>
+  ref: ForwardedRef<HTMLDivElement>,
 ): JSX.Element => {
   const articleBody = (
     <Card>

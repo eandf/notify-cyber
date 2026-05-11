@@ -20,7 +20,7 @@ export default function useLocalStorage<T>(
   key: string,
   initialValue: T,
   allowedValues: Array<SingleValue<T>> = [],
-  validationString?: string
+  validationString?: string,
 ): [T, React.Dispatch<React.SetStateAction<T>>] {
   const [storedValue, setStoredValue] = useState<T>(() => {
     if (typeof window === "undefined") return initialValue;
@@ -40,7 +40,7 @@ export default function useLocalStorage<T>(
       ) {
         if (Array.isArray(parsedItem.value)) {
           return parsedItem.value.filter((v: SingleValue<T>) =>
-            allowedValues.includes(v)
+            allowedValues.includes(v),
           ) as T;
         } else if (allowedValues.includes(parsedItem.value as SingleValue<T>)) {
           return parsedItem.value;
@@ -59,7 +59,7 @@ export default function useLocalStorage<T>(
       let toStore;
       if (Array.isArray(storedValue)) {
         toStore = storedValue.filter((v: SingleValue<T>) =>
-          allowedValues.includes(v)
+          allowedValues.includes(v),
         );
       } else if (allowedValues.includes(storedValue as SingleValue<T>)) {
         toStore = storedValue;

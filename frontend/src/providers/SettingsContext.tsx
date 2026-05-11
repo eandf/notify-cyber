@@ -19,7 +19,7 @@ export function SettingsProvider({ children }: { children: any }) {
   const [selectedSources, setSelectedSources] = useLocalStorage<string[]>(
     "selectedSources",
     ["caisa", "isg", "thn", "dr"],
-    ["caisa", "dr", "thn", "isg", "cve"]
+    ["caisa", "dr", "thn", "isg", "cve"],
   );
 
   const [otherSettings, setOtherSettings] = useState<
@@ -58,7 +58,7 @@ export function SettingsProvider({ children }: { children: any }) {
       newKeywords = [...otherSettings.keywords, keyword];
     } else {
       newKeywords = otherSettings.keywords.filter(
-        (kw: string) => kw !== keyword
+        (kw: string) => kw !== keyword,
       );
     }
 

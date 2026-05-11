@@ -93,7 +93,7 @@ function validatePayload(payload: Payload, dayOffset: number) {
     output.error =
       "Invalid 'after' property: must be greater than the minimum accepted time";
     logger.error(
-      `bad 'after' time provided: ${payload.after} [ NOT >= ] ${minCurrentTime}`
+      `bad 'after' time provided: ${payload.after} [ NOT >= ] ${minCurrentTime}`,
     );
     return output;
   }

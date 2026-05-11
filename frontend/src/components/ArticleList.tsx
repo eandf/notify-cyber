@@ -36,7 +36,7 @@ export default function ArticleList() {
 
       if (article) intersectionObserver.current.observe(article);
     },
-    [isLoading, hasNextPage, results]
+    [isLoading, hasNextPage, results],
   );
 
   const [isMounted, setIsMounted] = useState<boolean>(false);
@@ -52,10 +52,10 @@ export default function ArticleList() {
       .createHash("sha256")
       .update(
         ReactDomServer.renderToString(
-          <PinnedCard key="-1" setShow={(b: boolean) => {}} />
-        )
+          <PinnedCard key="-1" setShow={(b: boolean) => {}} />,
+        ),
       )
-      .digest("hex")
+      .digest("hex"),
   );
 
   useEffect(() => {

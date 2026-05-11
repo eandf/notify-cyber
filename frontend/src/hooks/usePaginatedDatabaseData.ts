@@ -9,7 +9,7 @@ import { useEffect, useState } from "react";
 
 export default function usePaginatedDatabaseData(
   cursor = 0,
-  settings: Settings
+  settings: Settings,
 ) {
   const [results, setResults] = useState<any[]>([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -33,7 +33,7 @@ export default function usePaginatedDatabaseData(
       sources: settings.selectedSources,
       filter: settings.keywords,
       after: Math.floor(
-        Date.now() / 1000 - appConfig.numDaysBack * 24 * 60 * 60
+        Date.now() / 1000 - appConfig.numDaysBack * 24 * 60 * 60,
       ),
     };
 
@@ -41,7 +41,7 @@ export default function usePaginatedDatabaseData(
       appConfig.databasePageSize,
       cursor,
       payload,
-      settings.searchString || ""
+      settings.searchString || "",
     )
       .then((events) => {
         setResults((prev) => {
@@ -49,12 +49,12 @@ export default function usePaginatedDatabaseData(
             // this is probably not good, but sometimes the hook double fetches
             // and this was the easiest way to prevent that from causing issues
             const newData = events.filter(
-              (d: any) => !prev.some((p) => p.id === d.id)
+              (d: any) => !prev.some((p) => p.id === d.id),
             );
             return [...prev, ...newData];
-          } catch(err) {
-            console.log(`error filtering: ${err}`)
-            return prev
+          } catch (err) {
+            console.log(`error filtering: ${err}`);
+            return prev;
           }
         });
         setHasNextPage(Boolean(events.length));

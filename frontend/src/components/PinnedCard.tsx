@@ -40,10 +40,16 @@ export default function PinnedCard({
         {formatEpochAsDate(1736278033, navigator.language)}
       </span>
       <p>
-      Discover the latest cybersecurity news from the past 7 days, gathered from various sources, all in one place! Join our{" "}
-        <a href={process.env.NEXT_PUBLIC_WAITLIST_URL} target="_blank" rel="noopener noreferrer">
+        Discover the latest cybersecurity news from the past 7 days, gathered
+        from various sources, all in one place! Join our{" "}
+        <a
+          href={process.env.NEXT_PUBLIC_WAITLIST_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           waitlist
-        </a> for possible future updates/features!
+        </a>{" "}
+        for possible future updates/features!
       </p>
     </div>
   ) : null;

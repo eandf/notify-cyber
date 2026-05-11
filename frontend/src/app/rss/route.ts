@@ -26,7 +26,7 @@ export async function GET(request: NextRequest) {
       filter: [],
       after: Math.floor(Date.now() / 1000 - 7 * 24 * 60 * 60),
     },
-    ""
+    "",
   );
 
   const feed = new RSS({
